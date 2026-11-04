@@ -17,3 +17,9 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Note names use `♯` and `♭`, never `#` or `b`.
 - Tests: Jest via `next/jest`, Node environment, for `lib/` only. Test files sit next to the code as `*.test.ts`. There are no component tests.
 - A new tool needs an entry in `tools` in `lib/site.ts`, which drives the home page tiles.
+
+## Before pushing
+
+Run `npm run check` (typecheck, lint, unit tests) and make sure it passes before every push. CI runs the same three checks on push, so a local pass means the push is safe.
+
+A `pre-push` hook in `.githooks/` runs `npm run check` automatically (`npm install` enables it via `core.hooksPath`). Never bypass it with `--no-verify`. Fix the failure instead.
