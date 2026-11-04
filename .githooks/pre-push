@@ -1,0 +1,3 @@
+#!/bin/sh
+# Mirrors CI so a failing push is caught before it leaves the machine.
+npm run check
