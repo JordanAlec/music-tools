@@ -1,6 +1,6 @@
-import SiteHeader from "./SiteHeader";
-import MainContent from "./MainContent";
-import SiteFooter from "./SiteFooter";
+import SiteHeader from "./site-header";
+import MainContent from "./main-content";
+import SiteFooter from "./site-footer";
 
 export default function CoreLayout({ children }: { children: React.ReactNode }) {
   return (
