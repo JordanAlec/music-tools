@@ -1,15 +1,14 @@
-import type { Metadata } from "next";
 import "./globals.css";
+import CoreLayout from "./components/layout/CoreLayout";
 
-export const metadata: Metadata = {
-  title: "Music Tools",
-  description: "Tools to aid musicians",
-};
+export { metadata, viewport } from "./metadata";
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html>
-      <body>{children}</body>
+    <html lang="en">
+      <body className="bg-white text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-100">
+        <CoreLayout>{children}</CoreLayout>
+      </body>
     </html>
   );
 }
