@@ -1,7 +1,7 @@
 import "./globals.css";
-import CoreLayout from "./components/layout/CoreLayout";
+import CoreLayout from "./components/layout/core-layout";
 
-export { metadata, viewport } from "./metadata";
+export { metadata, viewport } from "./lib/metadata";
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (

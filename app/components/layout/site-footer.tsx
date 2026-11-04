@@ -1,4 +1,4 @@
-import Container from "../Container";
+import Container from "../container";
 import { site } from "@/lib/site";
 
 export default function SiteFooter() {
