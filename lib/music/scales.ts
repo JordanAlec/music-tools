@@ -23,3 +23,9 @@ export function majorScale(tonic: string, signature: KeySignature): string[] {
     return signature.notes.find((note) => note[0] === letter) ?? letter;
   });
 }
+
+export function sharpen(note: string): string {
+  if (note.endsWith("♭")) return note.slice(0, -1);
+  if (note.endsWith("♯")) return `${note.slice(0, -1)}𝄪`;
+  return `${note}♯`;
+}
