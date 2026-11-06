@@ -1,9 +1,9 @@
 import type { CirclePosition } from "@/lib/music/circle-of-fifths";
 import { describeSignature } from "@/lib/music/key-signature";
 import Button from "../button";
-import KeySignatureSummary from "./key-signature-summary";
-import KeyTable from "./key-table";
-import ModesTable from "./modes-table";
+import KeySignatureSummary from "../key-signature-summary";
+import KeyTable from "../key-table";
+import ModesTable from "../modes-table";
 
 export default function KeyDetails({
   details,
@@ -40,7 +40,7 @@ export default function KeyDetails({
         <KeyTable title={`${major.tonic} major`} musicalKey={major} />
         <KeyTable title={`${minor.tonic} natural minor`} musicalKey={minor} />
       </div>
-      <ModesTable tonic={major.tonic} modes={modes} />
+      <ModesTable title={`Modes of ${major.tonic} major`} modes={modes} />
     </div>
   );
 }

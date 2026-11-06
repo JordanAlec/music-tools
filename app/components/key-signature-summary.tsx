@@ -1,5 +1,5 @@
 import { describeSignature, signatureSymbol, type KeySignature } from "@/lib/music/key-signature";
-import Card from "../card";
+import Card from "./card";
 
 export default function KeySignatureSummary({ signature }: { signature: KeySignature }) {
   return (

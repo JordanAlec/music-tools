@@ -9,4 +9,9 @@ export const tools = [
     href: "/circle-of-fifths",
     description: "Rotate through every key to see its signature, scales, chords and modes.",
   },
+  {
+    name: "Minor Keys",
+    href: "/minor-keys",
+    description: "Compare the natural, harmonic and melodic minor of every key: notes, chords and modes.",
+  },
 ];
