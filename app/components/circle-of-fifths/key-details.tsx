@@ -36,7 +36,7 @@ export default function KeyDetails({
         )}
       </header>
       <KeySignatureSummary signature={signature} />
-      <div className="grid gap-4">
+      <div className="grid grid-cols-1 gap-4">
         <KeyTable title={`${major.tonic} major`} musicalKey={major} />
         <KeyTable title={`${minor.tonic} natural minor`} musicalKey={minor} />
       </div>
