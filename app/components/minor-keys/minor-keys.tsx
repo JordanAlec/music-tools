@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { describeSignature } from "@/lib/music/key-signature";
 import { MINOR_KEYS } from "@/lib/music/minor-keys";
+import ButtonGroup from "../button-group";
 import KeySignatureSummary from "../key-signature-summary";
-import MinorKeyPicker from "./minor-key-picker";
 import MinorScaleSection from "./minor-scale-section";
 
 export default function MinorKeys() {
@@ -13,7 +13,13 @@ export default function MinorKeys() {
 
   return (
     <div className="space-y-8">
-      <MinorKeyPicker keys={MINOR_KEYS} selected={selected} onSelect={setSelected} />
+      <ButtonGroup
+        label="Minor key"
+        options={MINOR_KEYS}
+        selected={selected}
+        optionLabel={(key) => `${key.tonic}m`}
+        onSelect={setSelected}
+      />
       <header aria-live="polite" className="text-center">
         <h2 className="text-xl font-semibold">{tonic} minor</h2>
         <p className="text-sm text-neutral-500">

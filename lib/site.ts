@@ -14,4 +14,9 @@ export const tools = [
     href: "/minor-keys",
     description: "Compare the natural, harmonic and melodic minor of every key: notes, chords and modes.",
   },
+  {
+    name: "Mode Explorer",
+    href: "/mode-explorer",
+    description: "Pick any mode and tonic to see its parent key, formula and chords.",
+  },
 ];
