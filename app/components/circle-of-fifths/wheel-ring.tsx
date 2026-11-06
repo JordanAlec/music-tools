@@ -66,17 +66,18 @@ export default function WheelRing({
               d={sectorPath(innerRadius, outerRadius, angle - segmentAngle / 2, angle + segmentAngle / 2)}
               className={`stroke-white stroke-2 transition-colors dark:stroke-neutral-950 ${tone === "idle" ? idleClassName : SEGMENT_TONES[tone]}`}
             />
-            <text
-              x={x}
-              y={y}
-              fontSize={fontSize}
-              textAnchor="middle"
-              dominantBaseline="central"
-              className={`pointer-events-none select-none ${LABEL_TONES[tone]} ${transitionClassName}`}
-              style={{ transform: `rotate(${-rotation}deg)`, transformBox: "fill-box", transformOrigin: "center" }}
-            >
-              {label}
-            </text>
+            {/* Rotates around the translated origin, as WebKit ignores fill-box on SVG text. */}
+            <g transform={`translate(${x} ${y})`}>
+              <text
+                fontSize={fontSize}
+                textAnchor="middle"
+                dominantBaseline="central"
+                className={`pointer-events-none select-none ${LABEL_TONES[tone]} ${transitionClassName}`}
+                style={{ transform: `rotate(${-rotation}deg)` }}
+              >
+                {label}
+              </text>
+            </g>
           </g>
         );
       })}

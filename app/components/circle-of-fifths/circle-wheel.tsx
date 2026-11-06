@@ -28,13 +28,10 @@ export default function CircleWheel({
       role="group"
       aria-label="Circle of fifths. Drag, click a key or use the arrow keys to rotate."
       tabIndex={0}
-      className="w-full max-w-md touch-none rounded-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-500"
+      className="w-full max-w-md touch-none rounded-full [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-500"
       {...svgProps}
     >
-      <g
-        className={transitionClassName}
-        style={{ transform: `rotate(${rotation}deg)`, transformBox: "fill-box", transformOrigin: "center" }}
-      >
+      <g className={transitionClassName} style={{ transform: `rotate(${rotation}deg)` }}>
         <WheelRing
           {...ringProps}
           labels={labels.major}
