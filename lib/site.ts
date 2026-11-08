@@ -1,6 +1,7 @@
 export const site = {
   name: "Music Tools",
   description: "Tools to aid musicians",
+  repository: "https://github.com/JordanAlec/music-tools",
 };
 
 export const tools = [
